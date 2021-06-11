@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/KePixel (1).png" />
+    <title>Diseño Web</title>
+    <style>
+        *{
+          box-sizing: border-box;
+          margin: 0px;
+          list-style:none;
+        } 
+        /*celulares*/
+        .col-1{width: 8.33%;}
+        .col-2{width: 16.66%;}
+        .col-3{width: 25%;}
+        .col-4{width: 33.33%;}
+        .col-5{width: 41.66%;}
+        .col-6{width: 50%;}
+        .col-7{width: 58.33%;}
+        .col-8{width: 66.66%;}
+        .col-9{width: 75%;}
+        .col-10{width: 83.33%;}
+        .col-11{width: 91.66%;}
+        .col-12{width: 100%;} 
+        nav{
+          position: fixed;
+          background-color:black;
+          color:white;
+          height: 60px;       
+
+          text-align: right;
+          box-shadow: 0 0 10px red;
+          margin:0px;
+          width:100%;
+        } 
+        .imagen1{
+          float:right;
+          width: 90px;
+          height: auto;
+          margin-top: 0px;
+        }
+        .opciones{
+            display:none;
+        }
+        .navi a{
+            text-decoration: none;
+            color: white;
+        }
+        .navi2{
+            float:left;
+            background:transparent;
+            display:block;
+            border:1px solid transparent;
+            padding:15px 10px;
+            text-shadow: 0px 0px 15px white;
+            text-transform: uppercase;
+            font-size: 2vh;
+        }
+        .navi2 ul li{
+            float:right;
+            background:rgb(180, 57, 57);
+            display: block;
+            text-align: center;
+            border:1px solid transparent;
+            padding: 10px 10px;
+            text-shadow: 0px 0px 15px white;
+            text-transform: uppercase;
+            border-radius: 35px;
+            margin-top:5px;
+            width: 170px;
+            font-size:15px;
+        }
+        .navi2:hover {
+            background-color:white;
+            color:black;
+            text-shadow: 0px 0px 15px rgb(180, 57, 57);
+            border-radius: 35px;
+        }
+        .navi2:hover > a{
+            color:black;
+        }
+        .navi2 ul{
+            display:none;
+            position:absolute;
+            min-width:140px;
+        }
+        .navi2:hover > ul {
+            display:block;
+            margin-right:90px;
+            margin-top: 30px
+        }
+        .parrafo1{
+            padding-top:100px;
+        }
+        .parrafo1 h1{
+            text-align: center;
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+        }
+        .texto1 {
+            text-align: justify;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Berlin Sans FB;
+        }
+        .imagen2 img{
+            width: 100%;
+            height: auto;
+        }
+        .imagen2{
+            float: right;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 100px;
+        }
+        .texto2{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 30px;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+        }
+        .texto2 p{
+            color: black;
+            text-shadow: 0px 0px 1000px white;
+            font-size: 20px;
+        }
+        .texto2 h1{
+            font-size: 35px;
+        }
+        .texto3{
+            text-align: justify;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Berlin Sans FB;
+        }
+        .texto3 ul{
+            text-align: left;
+        }
+        .imagen3 img{
+            width: 95%;
+            height: auto;
+            padding-left: 20px;
+        }
+        .imagen3{
+            float: right;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .elemento1{
+            float: left;
+        }
+        .texto4{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+        }
+        .texto4 h1{
+            font-size: 35px;
+        }
+        .texto4 p{
+            color: black;
+            text-shadow: 0px 0px 1000px white;
+            font-size: 20px;
+        }
+        .imagen4 img{
+            width: 100%;
+            height: auto;
+        }
+        .imagen4{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .texto5{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 25px;
+            font-family: Berlin Sans FB;
+        }
+        .elemento2{
+            float:left;
+            padding-bottom: 20px;
+        }
+        .imagen5 img{
+            width: 100%;
+            height: auto;
+        }
+        .imagen5{
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .texto6{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Berlin Sans FB;
+        }
+        .elemento3{
+            float:left;
+            padding-bottom: 50px;
+        }
+        .imagen6 img{
+            width: 100%;
+            height: auto;
+        }
+        .imagen6{
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .texto7{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Berlin Sans FB;
+        }
+        .elemento4{
+            float:left;
+        }
+        .imagen7 img{
+            width: 100%;
+            height: auto;
+        }
+        .imagen7{
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .texto8{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 25px;
+            font-family: Berlin Sans FB;
+        }
+        .elemento5{
+            float:left;
+        }
+        .imagen8 img{
+            width: 100%;
+            height: auto;
+        }
+        .imagen8{
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .texto9{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 15px;
+            padding-left: 15px;
+            padding-bottom: 25px;
+            font-family: Berlin Sans FB;
+        }
+        .elemento6{
+            float:left;
+        }
+        .imagen9 img{
+            width: 100%;
+            height: auto;
+        }
+        .imagen9{
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .texto10{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Berlin Sans FB;
+        }
+        .texto11{
+            text-align: justify;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Berlin Sans FB;
+        }
+        .texto11 h1{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+            text-align: center;
+            font-size: 35px;
+        }
+        .imagen10 img{
+            width: 95%;
+            height: auto;
+            padding-top: 50px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .imagen10{
+            float: right;
+        }
+        .texto12{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 35px;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+        }
+        .texto12 p{
+            color: black;
+            text-shadow: 0px 0px 1000px white;
+            font-size: 20px;
+        }
+        .texto12 h1{
+            font-size: 35px;
+        }
+        .texto12 h2{
+            font-size: 35px;
+        }
+        .texto13{
+            text-align: justify;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Berlin Sans FB;
+        }
+        .texto13 ul{
+            text-align: left;
+        }
+        .texto14{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 35px;
+            padding-top: 90px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+        }
+        .texto14 h1{
+            font-size: 35px;
+        }
+        .imagen11 img{
+            width: 90%;
+            height: auto;
+            display: block;
+            margin: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 50px;
+        }
+        .texto15{
+            text-align: justify;
+            float: left;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 20px;
+            font-family: Berlin Sans FB;
+        }
+        .imagen12 img{
+            width: 90%;
+            height: auto;
+            padding-top: 50px;
+            display: block;
+            margin: auto;
+        }
+          .imagen12{
+            float: right;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .imagen13 img{
+            width: 90%;
+            height: auto;
+            padding-top: 90px;
+            display: block;
+            margin: auto;
+        }
+        .imagen13{
+            float: left;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .texto16{
+            text-align: justify;
+            float: right;
+            background-color: white;
+            font-size: 100%;
+            padding-top: 30px;
+            padding-right: 15px;
+            padding-left: 15px;
+            font-family: Berlin Sans FB;
+        }
+        .espacio1{
+            padding-top:120px;
+            padding-bottom:120px;
+        }
+        .contacto2{
+            margin-top:1000px;
+            background-color: black;
+            color: white;
+            box-shadow: 0 0 20px black;
+        }
+        .ima{
+            margin-left: auto;
+            margin-right: auto;
+          }
+        .ima img{
+            width:100%;
+            height:auto;
+        }    
+        .contacto2 p{
+            text-align: center;
+            font-size: 2vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold; 
+        } 
+         /*pc*/
+         @media only screen and (min-width:768px){
+          .col-g-1{width: 8.33%;}
+          .col-g-2{width: 16.66%;}
+          .col-g-3{width: 25%;}
+          .col-g-4{width: 33.33%;}
+          .col-g-5{width: 41.66%;}
+          .col-g-6{width: 50%;}
+          .col-g-7{width: 58.33%;}
+          .col-g-8{width: 66.66%;}
+          .col-g-9{width: 75%;}
+          .col-g-10{width: 83.33%;}
+          .col-g-11{width: 91.66%;}
+          .col-g-12{width: 100%;} 
+          body{
+            background-color: white;
+          }
+          nav{
+            position:fixed;
+            background-color:black;
+            color:white;
+            height: 70px;
+            text-align: right;
+            box-shadow: 0 0 10px red;
+          }
+          .opciones{
+            display:block
+          }
+          nav a{
+            text-decoration: none;
+            color: rgb(180, 57, 57);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            display: inline-block;
+            padding:25px 15px;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 15px white;
+          }
+          nav a:hover{
+            border-radius: 35px;
+            background-color: white;
+            color: black;
+            text-shadow: 0px 0px 15px rgb(180, 57, 57);
+          }  
+          .navi{
+            display:none;
+          }
+          .imagen1{
+            float:left;
+            width: 90px;
+            height: auto;
+            margin-top: 5px;
+          }
+          .parrafo1{
+            padding-top:100px;
+          }
+          .parrafo1 h1{
+            text-align: center;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+          }
+          .texto1 {
+            text-align: justify;
+            float: left;
+            background-color: white;
+            font-size: 25px;
+            padding-top: 40px;
+            padding-left: 20px;
+            font-family: Berlin Sans FB;
+          }
+          .imagen2 img{
+            width: 100%;
+            height: auto;
+          }
+          .imagen2{
+            float: right;
+          }
+          .texto2{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 25px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+          }
+          .texto2 p{
+            color: black;
+            text-shadow: 0px 0px 1000px white;
+          }
+          .texto3{
+            text-align: justify;
+            float: left;
+            background-color: white;
+            font-size: 25px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-family: Berlin Sans FB;
+          }
+          .imagen3 img{
+            width: 95%;
+            height: auto;
+            padding-left: 20px;
+          }
+          .imagen3{
+            float: right;
+          }
+          .texto4{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 25px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+          }
+          .texto4 p{
+            color: black;
+            text-shadow: 0px 0px 1000px white;
+          }
+          .elemento1{
+            float: left;
+            padding-bottom: 20px;
+          }
+          .imagen4 img{
+            width: 100%;
+            height: auto;
+          }
+          .imagen4{
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .texto5{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 15px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-family: Berlin Sans FB;
+          }
+          .elemento2{
+            float:left;
+            padding-bottom: 20px;
+          }
+          .imagen5 img{
+            width: 100%;
+            height: auto;
+          }
+          .imagen5{
+            margin-right: auto;
+            margin-left: auto;
+          }
+          .texto6{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 15px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-family: Berlin Sans FB;
+          }
+          .elemento3{
+            float:left;
+            padding-bottom: 150px;
+          }
+          .imagen6 img{
+            width: 100%;
+            height: auto;
+          }
+          .imagen6{
+            margin-right: auto;
+            margin-left: auto;
+          }
+          .texto7{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 15px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-family: Berlin Sans FB;
+          }
+          .elemento4{
+            float:left;
+          }
+          .imagen7 img{
+            width: 100%;
+            height: auto;
+          }
+          .imagen7{
+            margin-right: auto;
+            margin-left: auto;
+          }
+          .texto8{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 15px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-family: Berlin Sans FB;
+          }
+          .elemento5{
+            float:left;
+          }
+          .imagen8 img{
+            width: 100%;
+            height: auto;
+          }
+          .imagen8{
+            margin-right: auto;
+            margin-left: auto;
+          }
+          .texto9{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 15px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-family: Berlin Sans FB;
+          }
+          .elemento6{
+            float:left;
+          }
+          .imagen9 img{
+            width: 100%;
+            height: auto;
+          }
+          .imagen9{
+            margin-right: auto;
+            margin-left: auto;
+          }
+          .texto10{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 15px;
+            padding-top: 50px;
+            padding-left: 20px;
+            font-family: Berlin Sans FB;
+          }
+          .texto11{
+            text-align: justify;
+            float: left;
+            background-color: white;
+            font-size: 25px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-family: Berlin Sans FB;
+          }
+          .texto11 h1{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+            text-align: center;
+          }
+          .imagen10 img{
+            width: 95%;
+            height: auto;
+            padding-top: 50px;
+          }
+          .imagen10{
+            float: right;
+          }
+          .texto12{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 25px;
+            padding-top: 30px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+          }
+          .texto12 p{
+            color: black;
+            text-shadow: 0px 0px 1000px white;
+          }
+          .texto13{
+            text-align: justify;
+            float: left;
+            background-color: white;
+            font-size: 25px;
+            padding-top: 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+            font-family: Berlin Sans FB;
+          }
+          .texto14{
+            text-align: center;
+            float: left;
+            background-color: white;
+            font-size: 25px;
+            padding-top: 90px;
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(138, 4, 4);
+            text-shadow: 0px 0px 15px black;
+          }
+          .imagen11 img{
+            width: 90%;
+            height: auto;
+            padding-top: 90px;
+            display: block;
+            margin: auto;
+            box-shadow: 0px 0px 15px black;
+          }
+          .texto15{
+            text-align: justify;
+            float: left;
+            background-color: white;
+            font-size: 25px;
+            padding-top: 50px;
+            padding-left: 20px;
+            margin-top: 20px;
+            font-family: Berlin Sans FB;
+          }
+          .imagen12 img{
+            width: 90%;
+            height: auto;
+            padding-top: 50px;
+            display: block;
+            margin: auto;
+          }
+          .imagen12{
+            float: right;
+          }
+          .imagen13 img{
+            width: 90%;
+            height: auto;
+            padding-top: 90px;
+            display: block;
+            margin: auto;
+          }
+          .imagen13{
+            float: left;
+          }
+          .texto16{
+            text-align: justify;
+            float: left;
+            background-color: white;
+            font-size: 25px;
+            padding-top: 30px;
+            padding-right: 20px;
+            font-family: Berlin Sans FB;
+          }
+          .espacio1{
+            padding-top:120px;
+            padding-bottom:120px;
+          }
+          .contacto2{
+            margin-left:auto;
+            margin-right: auto;
+            background-color: black;
+            color: white;
+            box-shadow: 0 0 20px black;
+            margin-top: 1100px;
+          }
+          .ima{
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .ima img{
+            width:100%;
+            height:auto;
+          }
+          .contacto2 p{
+            text-align: center;
+            font-size: 2vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold; 
+          }
+          
+        }     
+        
+    </style>
+</head>
+<body>
+    <nav class="col-12  col-g-12">
+        <img src="img/KePixel (1).png" class="imagen1">
+        <div class="opciones">
+          <a href="index.html">Home</a>
+          <a href="desarrollo-apps.html">Desarrollo de Apps</a>
+          <a href="pag-contacto.html">Contacto</a>
+        </div>
+          <ul class="navi">
+            <li class="navi2"><a href="">¿Qué Necesita?</a>
+                <ul>
+                  <li class="navi3"><a href="index.html">Home</a><br></li>
+                  <li class="navi4"><a href="desarrollo-apps.html">Desarrollo de Apps</a><br></li>
+                  <li class="navi5"><a href="pag-contacto.html">Contacto</a></li>
+                </ul>
+           </li>    
+    </nav>
+
+    <div class="col-12 col-g-12 parrafo1">
+      <h1>
+        Diseño de Páginas Web Profesionales
+      </h1>
+    </div>
+    <div class="col-12 col-g-6 texto1">
+      <p>¿Necesitas diseñar una página web?, en nuestra agencia de diseño web nos encargamos de todo. Realizamos <b>diseño de páginas web profesionales y económicas.</b> El mejor precio-calidad del mercado en digitalización de empresas.<br><br>
+      Creamos páginas web, creamos contenido para tu web, incluimos imágenes, traducciones en varios idiomas y posicionamiento SEO. Soluciones integrales para diseño web, incluyendo servidores Cloud de alto rendimiento.<br><br>
+      ¡Cuéntanos tu idea!.</p>
+    </div>
+    <div class="col-12 col-g-6 imagen2">
+      <img src="https://appdesign.dev/wp-content/uploads/2021/02/Disen%CC%83o-pa%CC%81ginas-web.jpg">
+    </div>
+    <div class="col-12 col-g-12 texto2">
+      <h2>Agencia de Desarrollo Web</h2>
+      <h1>Desarrollo de páginas web profesionales</h1><br><br>
+      <p>Lo que realizamos en nuestra agencia de diseño de páginas web</p><br><br>
+    </div>
+    <div class="col-12 col-g-6 texto3">
+      <p>En nuestra empresa App Design, <b>diseñamos páginas web</b> que se ven increíbles. Priorizamos el rendimiento web y los diseños profesionales personalizados para cada sector.<br><br>
+      Nuestra prioridad para tu página web:<br><br></p>
+      <ul>
+        <li>- <b>Páginas web que cargan rápido</b></li>
+        <li>- <b>Sitios web seguros</b></li>
+        <li>- Diseños <b>actuales y modernos</b></li>
+        <li>- Soporte y panel de control para tu página web</li>
+        <li>- Servidores de alto rendimiento</li>
+        <li>- <b>Optimización SEO</b> para tu web</li>
+        <li>- Cumple con las políticas de privacidad</li>
+        <li>- Rendimiento web basado en Core Vitals</li>
+      </ul>
+    </div>
+    <div class="col-12 col-g-6 imagen3"><br><br>
+      <img src="https://appdesign.dev/wp-content/uploads/2020/08/disen%CC%83ador-web.jpg" ><br><br>
+    </div>
+    <div class="col-12 col-g-12 texto4">
+      <h1>Agencia de diseño web profesional</h1><br><br>
+      <p>Lo que realizamos en nuestra agencia de diseño</p>
+      <p>de páginas web</p><br><br>
+    </div>
+    <div class="col-12 col-g-4 elemento1">
+      <div class="col-4 col-g-6 imagen4">
+        <img src="https://image.flaticon.com/icons/png/512/1837/1837843.png">
+      </div>
+      <div class="col-12 col-g-12 texto5">
+        <p><b>Diseño página web profesional</b><br><br>Desde AppDesign, trabajamos para<br> ofrecer<b>la mejor experiencia en diseño<br>  web a nuestros clientes.</b> No solo<br>  realizamos <b>páginas web profesionales,</b><br>  también asesoramos y ayudamos a<br>  nuestros clientes para desarrollar su sitio<br> web con la calidad merecen.</p>
+      </div>
+    </div>
+    <div class="col-12 col-g-4 elemento2">
+      <div class="col-4 col-g-6 imagen5">
+        <img src="https://image.flaticon.com/icons/png/512/186/186239.png">
+      </div>
+      <div class="col-12 col-g-12 texto6">
+        <p><b>Mobile First: diseño web responsive</b><br><br> Todos <b>nuestros diseños se adaptan a</b><br> <b>dispositivos móviles.</b> Trabajamos<br> <b>para crear la mejor experiencia de<br> usuario</b> con nuestros diseños. En nuestra<br> agencia de diseño de páginas web, nos<br> actualizamos para dar <b>los mejores<br> servicios de diseño</b> a nuestros clientes.</p>
+      </div>
+    </div>
+    <div class="col-12 col-g-4 elemento3">
+      <div class="col-4 col-g-6 imagen6">
+        <img src="https://img-premium.flaticon.com/png/512/752/752326.png?token=exp=1623381766~hmac=f6c14228407008353aceecb88152021f">
+      </div>
+      <div class="col-12 col-g-12 texto7">
+        <p><b>Páginas web autogestionables</b><br><br> Utilizamos <b>WordPress</b>, el <b>gestor de<br> contenidos más utilizados</b> en la<br> actualidad. Dispondrás de un panel de<br> control de fácil uso, para actualizar tus<br> productos, publicar noticias y actualizar<br> tus servicios.</p>
+      </div>
+    </div>
+    <div class="col-12 col-g-4 elemento4">
+      <div class="col-4 col-g-6 imagen7">
+        <img src="https://image.flaticon.com/icons/png/512/300/300221.png">
+      </div>
+      <div class="col-12 col-g-12 texto8">
+        <p><b>Servicios SEO</b><br><br>
+        Además, incluimos la optimización de<br> posicionamiento seo gratis en todos<br> nuestros sitios web. <b>Tu página web en<br> buscadores y Google My Business<br> totalmente gratis.</b></p>
+      </div>
+    </div>
+    <div class="col-12 col-g-4 elemento5">
+      <div class="col-4 col-g-6 imagen8">
+        <img src="https://image.flaticon.com/icons/png/512/2933/2933296.png">
+      </div>
+      <div class="col-12 col-g-12 texto9">
+        <p><b>Diseño web actualizado</b><br><br>
+        Utilizamos las últimas versiones y<br> tendencias en diseño web. ¿Cómo lo<br> hacemos?: contactando con cada cliente<br> para ofrecer un <b>diseño web personalizado.</b></p>
+      </div>
+    </div>
+    <div class="col-12 col-g-4 elemento6">
+      <div class="col-4 col-g-6 imagen9">
+        <img src="https://image.flaticon.com/icons/png/512/3186/3186459.png">
+      </div>
+      <div class="col-12 col-g-12 texto10">
+        <p><b>Hosting de alta velocidad SSD</b><br><br>
+        La velocidad de carga se ha convertido en<br> uno de los principales factores para una<br> página web. Hosting optimizado para<br> WordPress. <b>Garantizamos mejorar la<br> velocidad de carga al actualizar tu web.</b></p>
+      </div>
+    </div>
+    <div class="col-12 col-g-6 texto11">
+      <h1>Desarrollo de tiendas online</h1><br><br>
+      <p>¿Te gustaría tener una tienda online sin límites?. <b>Diseñamos tu tienda online</b> utilizando la última tecnología en sistema eCommerce para venta online. Hacemos tu tienda online profesional de calidad al mejor precio.<br><br> Creamos tiendas virtuales para vender en cualquier parte del mundo . Nuestra agencia de diseño web, está especializada en <b>crear tiendas online</b> con sistema eCommerce de gran calidad. Vende a través de internet.</p>
+    </div>
+    <div class="col-12 col-g-6 imagen10">
+      <img src="https://appdesign.dev/wp-content/uploads/2020/09/Desarrollo-tiendas-online.jpg">
+    </div>
+    <div class="col-12 col-g-12 texto12">
+      <h2>Agencia eCommerce</h2>
+      <h1>Diseño de Tiendas Virtuales</h1><br><br>
+      <p>Elige nuestra empresa de diseño web para crear una solución completa para tu tienda online. Tu tienda<br> online profesional a través de un equipo de expertos.</p><br><br>
+    </div>
+    <div class="col-12 col-g-12 texto13">
+      <h2>¿Cómo creamos tu tienda online profesional?</h2><br><br>
+      <ul>
+        <li>1. <b>Creamos una estructura ya diseñada</b></li><br><br>
+        <p>Este es uno de los puntos clave en la reducción de costes, al tener todo el diseño ya construido, podemos crear tiendas online económicas de gran calidad. Te daremos varios ejemplos de diseño donde podrás elegir el que más se ajuste a tu sector.</p>
+        <li>2. <b>Dominio y hosting gratis</b></li><br><br>
+        <p>Ajustamos aún más los costes para nuestros clientes, ofreciendo el dominio y hosting totalmente gratis el primer año.</p>
+        <li>3. <b>Utilizamos un CMS profesional: Wordpress y Woocommerce.</b></li><br><br>
+        <p>Realizamos el <b>diseño de tu tienda online con Wordpreess.</b> Wordpress es el gestor de contenidos con mayor crecimiento en la actualidad. Panel de control para crear productos, pedidos y gestionar clientes.</p><br><br>
+        <p>Trabajamos con Prestashop, Magento, Shopify, Zen Cart, Bigcommerce o ¡también desarrollamos tu tienda online a medida con React!. ¡Pregúntanos!, te aconsejaremos el sistema eCommerce que mejor se adapte a tu tienda y presupuesto.</p>
+        <li>4. <b>Certificado SSL gratis para tu tienda online</b></li><br><br>
+        <p>Por supuesto, no damos de lado la seguridad de tu tienda online. Conectamos un certificado de seguridad para encriptar tu <b>tienda online gratis.</b></p>
+        <li>5. <b>Tienda online con velocidad de carga rápida</b></li><br><br>
+        <p>Además, aplicamos nuestros conocimientos y experiencia optimizando <b>páginas web con mejor velocidad de carga.</b></p>
+        <li>6. <b>Optimizada para SEO</b></li><br><br>
+        <p>Podrás modificar el título y descripción, a través de las herramientas creadas para que los buscadores indexen dicha información para cada producto.</p>
+        <li>7. <b>Tienda online sin límite de productos, ventas y clientes</b></li><br><br>
+        <p>Es muy importante saber que si creces, creceremos contigo, sin limitar tus recursos y poder expandir tu tienda online. Te daremos todo lo necesario para vender <b>sin pagos mensuales ni comisiones.</b></p><br><br>
+      </ul>
+      <p>Uno de los grandes retos con los que nos encontramos, es poder reducir el coste del desarrollo de la tienda online a nuestros clientes. Es importante conocer la situación de cada cliente, comprobar que muchos de nuestros clientes son nuevos emprendedores que disponen de recursos limitados, nos ha hecho adaptarnos para ofrecer un servicio completo desde <b><u>tiendas online baratas</u></b> hasta <b>sistemas eCommerce B2B.</b></p>
+    </div>
+    <div class="col-12 col-g-12 texto14">
+      <h1>Desarrollo de Tienda Virtual</h1>
+    </div>
+    <div class="col-12 col-g-12 imagen11">
+      <img src="https://appdesign.dev/wp-content/uploads/2020/09/Disen%CC%83o-tienda-online.jpg">
+    </div>
+    
+    <div class="col-12 col-g-6 texto15">
+      <p>Tu <b>tienda online profesional</b> totalmente autogestionable. Barato, no significa de mala calidad, reducimos el precio, creando <b>tiendas online económicas</b>, trabajando sobre diseños ya construidos de gran calidad y actuales.<br><br> Esta forma de trabajar reduce los tiempos de trabajo en nuestra empresa de creación de <b>páginas web para vender en internet</b>. Cada cliente requiere unos requisitos, por lo que no trabajamos igual para grandes empresas con diseño web a medida que para pequeños empresarios o pymes que comienzan un nuevo negocio en internet.</p>
+    </div>
+    <div class="col-12 col-g-6 imagen12">
+      <img src="https://appdesign.dev/wp-content/uploads/2020/09/crear-tienda-online.jpg">
+    </div>
+    <div class="col-12 col-g-6 imagen13">
+      <img src="https://appdesign.dev/wp-content/uploads/2020/09/desarrollo-tienda-virtual.jpg">
+    </div>
+    <div class="col-12 col-g-6 texto16">
+      <p>Si estás pensando en convertir tu negocio a digital, esta es tu empresa. Escuchamos a nuestros clientes para ofrecer el servicio que más se ajuste para cada uno de ellos, de forma totalmente personalizada.<br><br>
+      Si estás comenzando y te has preguntado si necesitas una web para tu empresa, esta es tu agencia. No pierdas tiempo en constructores o sistemas limitados donde nunca podrás crecer, la tienda es tuya y <b>te daremos todo el código si necesitas cambiar a otro diseñador o empresa de hosting sin condiciones</b>.</p>
+    </div>
+    <div class="col-12 col-g-12 espacio1"></div>
+    <div class="col-12 col-m-12 col-g-12 contacto2">
+      <div class="col-3 col-m-2 col-g-2 ima">
+        <img src="img/KePixel (1).png">
+      </div>  
+      <p>Agencia de Diseño Web, Desarrollo de Aplicaciones y Software<br><br>
+        📍La Ceiba - Comayagua - SPS<br><br>
+        kepixel@design.com<br><br>
+      +504 9603-6528</p>
+    </div>
+</body>
+</html>
